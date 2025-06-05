@@ -4,6 +4,3 @@ import sys, json, os
 
 def main():
     pass
-
-
-
