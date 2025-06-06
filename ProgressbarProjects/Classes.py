@@ -1,39 +1,35 @@
 class Project:
-    def __init__(self, projectID, name, desc, time_create, time_update, tasks, progress):
+    def __init__(self, projectID, name, desc, time_create, time_update, tasks, tags, progress):
         self.projectID = projectID
         self.name = name
         self.desc = desc
         self.time_create = time_create
         self.time_update = time_update
         self.tasks = tasks
+        self.tags = tags
         self.progress = progress
 
-    def Edit():
-        pass
-
-    def Delete():
-        pass
-
 class Task:
-    def __init__(self, taskID, name, desc, weight, subtasks):
+    def __init__(self, taskID, name, desc, weight, tags, subtasks):
         self.taskID = taskID
         self.name = name
         self.desc = desc
         self.weight = weight
+        self.tags = tags
         self.subtasks = subtasks
 
-    def Edit():
-        pass
-
-    def Delete():
-        pass
-
 class Subtask:
-    def __init__(self, subtaskID, name, desc, weight):
-        pass
-    
-    def Edit():
-        pass
+    def __init__(self, subtaskID, name, desc, tags, weight):
+        self.subtaskID = subtaskID
+        self.name = name
+        self.desc = desc
+        self.tags = tags
+        self.weight = weight
 
-    def Delete():
-        pass
+class Tag:
+    def __init__(self, tagID, name, desc, colour):
+        self.tagID = tagID
+        self.name = name
+        self.desc = desc
+        self.colour = colour
+    
