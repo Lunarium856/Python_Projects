@@ -1,16 +1,17 @@
 from Classes import Project as p, Task as t, Subtask as st
 # from PyQt5 import QtWidgets
-import PyQt5
-from PyQt5.QtWidgets import QApplication, QWidget
+from PyQt5.QtWidgets import QApplication, QWidget, QMainWindow
 import sys, json, os
+
+class MainWindow(QMainWindow):
+    def __init__(self):
+        super().__init__()
 
 def main():
     app = QApplication(sys.argv)
-
-    window = QWidget()
+    window = MainWindow()
     window.show()
-
-    app.exec()
+    sys.exit(app.exec_())
 
 def EditProject():
     pass
@@ -36,3 +37,6 @@ def EditTag():
 def DeleteTag():
     pass
 
+
+if __name__ == "__main__":
+    main()
